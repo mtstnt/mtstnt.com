@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MtstntCom</title>
+    <title><%= @title or "Title" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= yield :head %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid px-0">
+      <%= yield :navbar %>
+      <%= yield :body %>
+    </div>
   </body>
+
+  <%= yield :scripts %>
 </html>

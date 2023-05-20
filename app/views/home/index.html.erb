@@ -1,0 +1,28 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag 'home/index' %>
+<% end %>
+
+<% content_for :body do %>
+  <div data-controller="home"
+    class="
+      d-flex
+      justify-content-center
+      align-items-center
+      flex-column
+      vh-100
+      vw-100
+    "
+  >
+    <div class="row col-9">
+      <div class="col border">
+        <h1 data-home-target="text">Hello there!</h1>
+        <h4 data-action="click->home#changeText">My name is Matthew Sutanto</h4>
+      </div>
+      <div class="col border">
+
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render template: "layouts/application" %>
