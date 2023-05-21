@@ -12,8 +12,14 @@
     <%= yield :head %>
   </head>
 
-  <body>
+  <body data-controller="app" data-bs-theme="dark">
     <div class="container-fluid px-0">
+      <button
+        data-app-target="themeToggler"
+        id="theme-toggler"
+        class="btn btn-secondary rounded-circle"
+        data-action="click->app#toggleTheme"
+      ><i class="fas fa-moon"></i></button>
       <%= yield :navbar %>
       <%= yield :body %>
     </div>

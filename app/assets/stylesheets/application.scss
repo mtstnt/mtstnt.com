@@ -13,7 +13,44 @@
  *= require_tree .
  *= require_self
  */
- $font-size-base: 1rem;
+$font-size-base: 1rem;
 
- @import 'bootstrap';
+@import 'bootstrap';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
 
+* {
+    font-family: 'Segoe UI', monospace;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #404040 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--bs-body-color);
+    border-radius: 10px;
+}
+
+nav a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        transition: .5s;
+    }
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
